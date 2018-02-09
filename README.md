@@ -26,10 +26,10 @@ The frontend is developed using the [React](https://github.com/facebookincubator
   * `POST http://localhost:8090/orders`
   * `curl` Example:
     ```
-    curl -v 'http://localhost:8090/orders'\
-    -H 'Content-Type: application/json;charset=UTF-8'\
-    -H 'Accept: application/json, text/plain, */*'\
-    --data-binary '{"lenderAddress":"0x2fd5d34162fa812e7d71bd5305954f4733e9271c","tokenPair":"OMG/ETH","loanQuantity":0,"loanToken":"OMG","costAmount":100,"costToken":"ETH","ecSignature":"0x65796199fc0d1ee0b599011845a2c54fa4b88051cf10aa2cc34000c6aea9d946010d41fbb1a5ead6d742e06f6a56e45f1773665d0abd084988461ec3424c23011c"}'
+    curl -v 'http://localhost:8090/orders' \
+    -H 'Content-Type: application/json;charset=UTF-8' \
+    -H 'Accept: application/json, text/plain, */*' \
+    --data-binary '{"exchangeContractAddress":"0x12459c951127e0c374ff9105dda097662a027093","maker":"0x9e56625509c2f60af937f23b7b532600390e8c8b","taker":"0xa2b31dacf30a9c50ca473337c01d8a201ae33e32","makerTokenAddress":"0x323b5d4c32345ced77393b3530b1eed0f346429d","takerTokenAddress":"0xef7fff64389b814a946f3e92105513705ca6b990","feeRecipient":"0xb046140686d052fff581f63f8136cce132e857da","makerTokenAmount":"10000000000000000","takerTokenAmount":"20000000000000000","makerFee":"100000000000000","takerFee":"200000000000000","expirationUnixTimestampSec":"42","salt":"67006738228878699843088602623665307406148487219438534730168799356281242528500","ecSignature":"0x61a3ed31b43c8780e905a260a35faefcc527be7516aa11c0256729b5b351bc33"}'
     ```
 
 ### Deployment Instructions
