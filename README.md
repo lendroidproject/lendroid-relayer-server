@@ -22,7 +22,7 @@ The frontend is developed using the [React](https://github.com/facebookincubator
 ### Interacting with the app
 1. To fetch all existing offers:
   * `GET http://localhost:8090/orders`
-2. TO create an offer:
+2. To create an order:
   * `POST http://localhost:8090/orders`
   * `curl` Example:
     ```
@@ -31,7 +31,40 @@ The frontend is developed using the [React](https://github.com/facebookincubator
     -H 'Accept: application/json, text/plain, */*' \
     --data-binary '{"exchangeContractAddress":"0x12459c951127e0c374ff9105dda097662a027093","maker":"0x9e56625509c2f60af937f23b7b532600390e8c8b","taker":"0xa2b31dacf30a9c50ca473337c01d8a201ae33e32","makerTokenAddress":"0x323b5d4c32345ced77393b3530b1eed0f346429d","takerTokenAddress":"0xef7fff64389b814a946f3e92105513705ca6b990","feeRecipient":"0xb046140686d052fff581f63f8136cce132e857da","makerTokenAmount":"10000000000000000","takerTokenAmount":"20000000000000000","makerFee":"100000000000000","takerFee":"200000000000000","expirationUnixTimestampSec":"42","salt":"67006738228878699843088602623665307406148487219438534730168799356281242528500","ecSignature":"0x61a3ed31b43c8780e905a260a35faefcc527be7516aa11c0256729b5b351bc33"}'
     ```
-
+3. To create an order:
+  * `GET http://localhost:8090/orders`
+  * `curl` Example:
+    ```
+    > GET /orders HTTP/1.1
+    > Host: localhost:8090
+    > User-Agent: curl/7.54.0
+    > Accept: */*
+    >
+    < HTTP/1.1 200 OK
+    < content-type: application/json
+    < Server: Development/2.0
+    < Date: Fri, 09 Feb 2018 02:57:44 GMT
+    <
+    {
+      "orders": [
+        {
+          "ecSignature": "0x61a3ed31b43c8780e905a260a35faefcc527be7516aa11c0256729b5b351bc33",
+          "exchangeContractAddress": "0x12459c951127e0c374ff9105dda097662a027093",
+          "expirationUnixTimestampSec": "42",
+          "feeRecipient": "0xb046140686d052fff581f63f8136cce132e857da",
+          "maker": "0x9e56625509c2f60af937f23b7b532600390e8c8b",
+          "makerFee": "100000000000000",
+          "makerTokenAddress": "0x323b5d4c32345ced77393b3530b1eed0f346429d",
+          "makerTokenAmount": "10000000000000000",
+          "salt": "67006738228878699843088602623665307406148487219438534730168799356281242528500",
+          "taker": "0xa2b31dacf30a9c50ca473337c01d8a201ae33e32",
+          "takerFee": "200000000000000",
+          "takerTokenAddress": "0xef7fff64389b814a946f3e92105513705ca6b990",
+          "takerTokenAmount": "20000000000000000"
+        }
+      ]
+    ```
+  
 ### Deployment Instructions
 
 1. Include all the files created by running `npm build` or `yarn build` into the `templates` folder.
