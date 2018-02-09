@@ -16,11 +16,11 @@ The frontend is developed using the [React](https://github.com/facebookincubator
   * `docker-compose up`
 2. The command will start and instance of the python server accessible at:
   * [http://localhost:8090/](http://localhost:8090/)
-3. The commnad will also start an instance of the google cloud datastore emulator at:
+3. The command will also start an instance of the google cloud datastore emulator at:
   * [http://localhost:8889/](http://localhost:8889/)
 
 ### Interacting with the app
-1. To fetch all existing offers:
+1. To fetch all existing orders:
   * `GET http://localhost:8090/orders`
 2. To create an order:
   * `POST http://localhost:8090/orders`
