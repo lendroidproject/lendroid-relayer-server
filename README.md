@@ -21,12 +21,12 @@ The frontend is developed using the [React](https://github.com/facebookincubator
 
 ### Interacting with the app
 1. To fetch all existing offers:
-  * `GET http://localhost:8080/offers`
+  * `GET http://localhost:8090/orders`
 2. TO create an offer:
-  * `POST http://localhost:8080/offers`
+  * `POST http://localhost:8090/orders`
   * `curl` Example:
     ```
-    curl -v 'http://localhost:8080/offers'\
+    curl -v 'http://localhost:8090/orders'\
     -H 'Content-Type: application/json;charset=UTF-8'\
     -H 'Accept: application/json, text/plain, */*'\
     --data-binary '{"lenderAddress":"0x2fd5d34162fa812e7d71bd5305954f4733e9271c","tokenPair":"OMG/ETH","loanQuantity":0,"loanToken":"OMG","costAmount":100,"costToken":"ETH","ecSignature":"0x65796199fc0d1ee0b599011845a2c54fa4b88051cf10aa2cc34000c6aea9d946010d41fbb1a5ead6d742e06f6a56e45f1773665d0abd084988461ec3424c23011c"}'
