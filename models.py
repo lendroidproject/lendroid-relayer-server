@@ -5,7 +5,7 @@ class OrderModel(ndb.Model):
     maker = ndb.StringProperty(required=True)
     taker = ndb.StringProperty(required=True)
     makerTokenAddress = ndb.StringProperty(required=True)
-    takerTokenAddress = ndb.IntegerProperty(required=True)
+    takerTokenAddress = ndb.StringProperty(required=True)
     feeRecipient = ndb.StringProperty(required=True)
     makerTokenAmount = ndb.StringProperty(required=True)
     takerTokenAmount = ndb.StringProperty(required=True)

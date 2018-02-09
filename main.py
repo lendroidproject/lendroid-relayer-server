@@ -29,8 +29,8 @@ class Index(Resource):
 class Orders(Resource):
     def get(self):
         """ Return a list of existing loan offers"""
-        offers = models.OrderModel.query().fetch()
-        offers_list = [order.to_dict() for order in orders]
+        orders = models.OrderModel.query().fetch()
+        orders_list = [order.to_dict() for order in orders]
         return jsonify(orders=orders_list)
 
     def post(self):
