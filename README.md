@@ -22,7 +22,7 @@ The frontend is developed using the [React](https://github.com/facebookincubator
 ### Interacting with the app
 1. To create an order:
   * `POST http://localhost:8090/orders`
-  * `curl` Example:
+  * **curl** example:
     ```
     curl -v -POST 'http://localhost:8090/orders' \
     -H 'Content-Type: application/json;charset=UTF-8' \
@@ -45,7 +45,7 @@ The frontend is developed using the [React](https://github.com/facebookincubator
     ```
 2. To fetch orders:
   * `GET http://localhost:8090/orders`
-  * `curl` Example:
+  * **curl** Example:
     ```
     > GET /orders HTTP/1.1
     > Host: localhost:8090
