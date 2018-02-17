@@ -26,13 +26,18 @@ def marginTab(self):
     return render_template('index.html')
 
 @app.route('/view-orders')
-def marginTab(self):
+def ordersTab(self):
     return render_template('index.html')
+
+def output_html(data, code, headers=None):
+    resp = app.make_response(data)
+    resp.status_code = code
+    return resp
 
 class Index(Resource):
     def get(self):
         """ Render the Index page"""
-        return render_template('index.html')
+        return output_html(render_template('index.html'), 200)
 
 class Orders(Resource):
     def get(self):
