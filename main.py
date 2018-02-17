@@ -21,6 +21,14 @@ def page_not_found(e):
     """Return a custom 404 error."""
     return 'Sorry, nothing at this URL.', 404
 
+@app.route('/margin-trade')
+def marginTab(self):
+    return render_template('index.html')
+
+@app.route('/view-orders')
+def marginTab(self):
+    return render_template('index.html')
+
 class Index(Resource):
     def get(self):
         """ Render the Index page"""
